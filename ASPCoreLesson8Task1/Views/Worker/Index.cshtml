@@ -1,0 +1,22 @@
+﻿@using ASPCoreLesson8Task1.Models
+@model List<Worker>
+
+
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Workers</title>
+</head>
+<body>
+    @foreach (Worker worker in Model)
+    {
+        <p> @worker.Id</p>
+        <p> @worker.Name</p>
+        <p> @worker.Surname</p>
+        <p> @(new string('-',30))</p>
+    }
+</body>
+</html>

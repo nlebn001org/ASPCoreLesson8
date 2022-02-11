@@ -1,0 +1,21 @@
+﻿@using ASPCoreLesson8Task1.Models
+@model List<Customer>
+
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Workers</title>
+</head>
+<body>
+    @foreach (Customer customer in Model)
+    {
+        <p> @customer.Id</p>
+        <p> @customer.Name</p>
+        <p> @customer.Surname</p>
+        <p> @(new string('-',30))</p>
+    }
+</body>
+</html>
